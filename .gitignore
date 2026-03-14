@@ -1,0 +1,6 @@
+venv/
+**pycache**/
+.env
+.ipynb_checkpoints/
+chroma/
+vectorstore/
