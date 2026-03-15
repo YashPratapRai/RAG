@@ -5,3 +5,5 @@ venv/
 chroma/
 vectorstore/
 uv.lock
+pyproject.toml
+vector_store/
