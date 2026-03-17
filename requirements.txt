@@ -10,3 +10,4 @@ langchain-groq
 python-dotenv
 langchain-openai
 langgraph
+streamlit
