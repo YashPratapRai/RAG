@@ -15,19 +15,31 @@ Large Language Models are powerful, but they hallucinate when they lack access t
 ## 🏗️ Architecture
 
 ```
-User Query
-    │
-    ▼
-Embedding Generation         ← Query converted to vector
-    │
-    ▼
-Vector Similarity Search     ← FAISS finds most relevant chunks
-    │
-    ▼
-Document Chunk Retrieval     ← Top-k relevant passages extracted
-    │
-    ▼
-LLM Response Generation      ← Answer generated using retrieved context
+PDF Upload
+   ↓
+PyMuPDFLoader
+   ↓
+Document Pages
+   ↓
+Chunking
+   ↓
+Embeddings
+   ↓
+ChromaDB
+   ↓
+User Question
+   ↓
+Question Embedding
+   ↓
+Similarity Search
+   ↓
+Top 3 Chunks
+   ↓
+Conversation Memory
+   ↓
+ChatGroq (Llama 3.1)
+   ↓
+Answer
 ```
 
 ---
